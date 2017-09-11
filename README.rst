@@ -1,5 +1,5 @@
 ====================
-spotinst troposhpere
+spotinst troposphere
 ====================
 
 About
