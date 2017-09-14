@@ -47,8 +47,8 @@ beanstalk_elastigroup = t.add_resource(BeanstalkElastigroup(
         spotInstanceTypes=["c3.large", "m3.large"],
         beanstalk=BeanstalkEnvironmentConfig(
             environmentName=BeanstalkEnvironmentNameConfig(
-                Ref="beanstalkEnv")),
-        DependsOn='beanstalkEnv')
+                Ref="beanstalkEnv"))),
+    DependsOn='beanstalkEnv'
 ))
 
 print(t.to_json())
