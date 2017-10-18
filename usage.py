@@ -40,6 +40,7 @@ beanstalk_elastigroup = t.add_resource(BeanstalkElastigroup(
     beanstalkElastigroup=BeanstalkElastigroupConfig(
         region='us-west-2',
         product="Linux/UNIX",
+        name='BeanstalkName',
         capacity=BeanstalkElastigroupCapacity(
             minimum=0,
             maximum=10,

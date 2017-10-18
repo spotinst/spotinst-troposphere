@@ -23,6 +23,7 @@ class BeanstalkElastigroupConfig(AWSProperty):
     props = {
         'region': (basestring, True),
         'product': (basestring, True),
+        'name':(basestring, False),
         'capacity': (BeanstalkElastigroupCapacity, True),
         'spotInstanceTypes': ([basestring], True),
         'beanstalk': (BeanstalkEnvironmentConfig, True)
