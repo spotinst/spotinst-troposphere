@@ -13,6 +13,10 @@ Installation
 
 After installing troposphere, add the beanstalk_elastigroup file to your library, and use the code in the usage.py file as an example.
 
+Object reference: http://docs.spotinst.com/#page:amazon-web-services,header:amazon-web-services-elastigroups-post
+
+For additional information please see: https://help.spotinst.com/hc/en-us/articles/115002341149
+
 Examples
 ========
 For Usage example, please see usage.py
