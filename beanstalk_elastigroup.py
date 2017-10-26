@@ -10,7 +10,7 @@ class BeanstalkElastigroupCapacity(AWSProperty):
 
 class BeanstalkEnvironmentNameConfig(AWSProperty):
     props = {
-        'Ref': (basestring, True)
+        'Ref': (str, True)
     }
 
 class BeanstalkEnvironmentConfig(AWSProperty):
@@ -21,11 +21,11 @@ class BeanstalkEnvironmentConfig(AWSProperty):
 
 class BeanstalkElastigroupConfig(AWSProperty):
     props = {
-        'region': (basestring, True),
-        'product': (basestring, True),
-        'name':(basestring, False),
+        'region': (str, True),
+        'product': (str, True),
+        'name':(str, False),
         'capacity': (BeanstalkElastigroupCapacity, True),
-        'spotInstanceTypes': ([basestring], True),
+        'spotInstanceTypes': ([str], True),
         'beanstalk': (BeanstalkEnvironmentConfig, True)
     }
 
@@ -35,8 +35,8 @@ class BeanstalkElastigroup(AWSCustomObject):
     resource_type = "Custom::beanstalkElastigroup"
 
     props = {
-        'ServiceToken': (basestring, True),
-        'accessToken': (basestring, True),
-        'accountId': (basestring, True),
+        'ServiceToken': (str, True),
+        'accessToken': (str, True),
+        'accountId': (str, True),
         'beanstalkElastigroup': (BeanstalkElastigroupConfig, True)
     }

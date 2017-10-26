@@ -11,13 +11,13 @@ class ElastigroupThirdPartiesIntegrationRancher(AWSProperty):
 
 class ElastigroupThirdPartiesIntegrationMesosphere(AWSProperty):
     props = {
-        'apiServer': (basestring, True)
+        'apiServer': (str, True)
     }
 
 
 class ElastigroupThirdPartiesIntegrationElasticBeanstalkDEploymentPreferencesStrategy(AWSProperty):
     props = {
-        'action': (basestring, True),
+        'action': (str, True),
         'shouldDrainInstances': (bool, False)
     }
 
@@ -33,7 +33,7 @@ class ElastigroupThirdPartiesIntegrationElasticBeanstalkDEploymentPreferences(AW
 
 class ElastigroupThirdPartiesIntegrationElasticBeanstalk(AWSProperty):
     props = {
-        'environmentId': (basestring, True),
+        'environmentId': (str, True),
         'deploymentPreferences': (ElastigroupThirdPartiesIntegrationElasticBeanstalkDEploymentPreferences, False)
     }
 
@@ -63,43 +63,43 @@ class ElastigroupThirdPartiesIntegrationEcsAutoScale(AWSProperty):
 
 class ElastigroupThirdPartiesIntegrationEcs(AWSProperty):
     props = {
-        'clusterName': (basestring, True),
+        'clusterName': (str, True),
         'autoScale': (ElastigroupThirdPartiesIntegrationEcsAutoScale, False)
     }
 
 
 class ElastigroupThirdPartiesIntegrationMlbRuntime(AWSProperty):
     props = {
-        'deploymentId': (basestring, True)
+        'deploymentId': (str, True)
     }
 
 
 class ElastigroupThirdPartiesIntegrationKubernetes(AWSProperty):
     props = {
-        'apiServer': (basestring, True),
-        'token': (basestring, True)
+        'apiServer': (str, True),
+        'token': (str, True)
     }
 
 
 class ElastigroupThirdPartiesIntegrationRightScale(AWSProperty):
     props = {
-        'accountId': (basestring, True),
-        'refreshToken': (basestring, True),
-        'region': (basestring, False),
+        'accountId': (str, True),
+        'refreshToken': (str, True),
+        'region': (str, False),
     }
 
 
 class ElastigroupThirdPartiesIntegrationOpsWorks(AWSProperty):
     props = {
-        'layerId': (basestring, True),
-        'stackType': (basestring, True),
+        'layerId': (str, True),
+        'stackType': (str, True),
     }
 
 
 class ElastigroupThirdPartiesIntegrationCodeDeployDeploymentGroups(AWSProperty):
     props = {
-        'applicationName': (basestring, True),
-        'deploymentGroupName': (basestring, True)
+        'applicationName': (str, True),
+        'deploymentGroupName': (str, True)
     }
 
 
@@ -113,24 +113,24 @@ class ElastigroupThirdPartiesIntegrationCodeDeploy(AWSProperty):
 
 class ElastigroupThirdPartiesIntegrationChef(AWSProperty):
     props = {
-        'chefServer': (basestring, True),
-        'organization': (basestring, True),
-        'user': (basestring, True),
-        'pemKey': (basestring, True),
-        'chefVersion': (basestring, True),
+        'chefServer': (str, True),
+        'organization': (str, True),
+        'user': (str, True),
+        'pemKey': (str, True),
+        'chefVersion': (str, True),
     }
 
 
 class ElastigroupThirdPartiesIntegrationNomad(AWSProperty):
     props = {
-        'masterHost': (basestring, True),
+        'masterHost': (str, True),
         'masterPort': (integer, True)
     }
 
 
 class ElastigroupThirdPartiesIntegrationDockerSwarm(AWSProperty):
     props = {
-        'masterHost': (basestring, True),
+        'masterHost': (str, True),
         'masterPort': (integer, True)
     }
 
@@ -154,37 +154,37 @@ class ElastigroupThirdPartiesIntegration(AWSProperty):
 
 class ElastigroupComputeInstanceTypeWeight(AWSProperty):
     props = {
-        'instanceType': (basestring, True),
-        'weightedCapacity': (basestring, True)
+        'instanceType': (str, True),
+        'weightedCapacity': (str, True)
     }
 
 
 class ElastigroupComputeInstanceTypes(AWSProperty):
     props = {
-        'ondemand': (basestring, True),
-        'spot': ([basestring], True),
+        'ondemand': (str, True),
+        'spot': ([str], True),
         'weights': ([ElastigroupComputeInstanceTypeWeight], False)
     }
 
 
 class ElastigroupComputeAvailabilityZone(AWSProperty):
     props = {
-        'name': (basestring, True),
-        'subnetId': (basestring, False),
-        'subnetIds': ([basestring], False),
-        'placementGroupName': (basestring, False)
+        'name': (str, True),
+        'subnetId': (str, False),
+        'subnetIds': ([str], False),
+        'placementGroupName': (str, False)
     }
 
 
 class ElastigroupComputeLaunchSpecificationLoadBalancerConfigLoadBalancer(AWSProperty):
     props = {
-        'name': (basestring, False),
-        'arn': (basestring, False),
-        'balancerId': (basestring, False),
-        'targetSetId': (basestring, False),
+        'name': (str, False),
+        'arn': (str, False),
+        'balancerId': (str, False),
+        'targetSetId': (str, False),
         'azAwareness': (bool, False),
         'autoWeight': (bool, False),
-        'type': (basestring, True)
+        'type': (str, True)
     }
 
 
@@ -196,9 +196,9 @@ class ElastigroupComputeLaunchSpecificationLoadBalancerConfig(AWSProperty):
 
 class ElastigroupComputeLaunchSpecificationIamRole(AWSProperty):
     props = {
-        'name': (basestring, False),
-        'arn': (basestring, False),
-        'iamRole': (basestring, False)
+        'name': (str, False),
+        'arn': (str, False),
+        'iamRole': (str, False)
     }
 
 
@@ -207,67 +207,67 @@ class ElastigroupComputeLaunchSpecificationBlockDeviceEbs(AWSProperty):
         'deleteOnTermination': (bool, False),
         'encrypted': (bool, False),
         'iops': (integer, False),
-        'snapshotId': (basestring, False),
+        'snapshotId': (str, False),
         'volumeSize': (integer, False),
-        'volumeType': (basestring, False)
+        'volumeType': (str, False)
     }
 
 
 class ElastigroupComputeLaunchSpecificationBlockDevice(AWSProperty):
     props = {
-        'deviceName': (basestring, False),
+        'deviceName': (str, False),
         'eb': (ElastigroupComputeLaunchSpecificationBlockDeviceEbs, False),
-        'noDevice': (basestring, False),
-        'virtualName': (basestring, False)
+        'noDevice': (str, False),
+        'virtualName': (str, False)
     }
 
 
 class ElastigroupComputeLaunchSpecificationNetworkInterfacePrivateIpAddress(AWSProperty):
     props = {
-        'privateIpAddress': (basestring, True),
+        'privateIpAddress': (str, True),
         'primary': (bool, False)
     }
 
 
 class ElastigroupComputeLaunchSpecificationNetworkInterface(AWSProperty):
     props = {
-        'description': (basestring, False),
+        'description': (str, False),
         'deviceIndex': (integer, False),
         'secondaryPrivateIpAddressCount': (integer, False),
         'associatePublicIpAddress': (bool, False),
         'deleteOnTermination': (bool, False),
-        'groups': ([basestring], False),
-        'networkInterfaceId': (basestring, False),
-        'privateIpAddress': (basestring, False),
+        'groups': ([str], False),
+        'networkInterfaceId': (str, False),
+        'privateIpAddress': (str, False),
         'privateIpAddresses': ([ElastigroupComputeLaunchSpecificationNetworkInterfacePrivateIpAddress], False),
-        'subnetId': (basestring, False),
+        'subnetId': (str, False),
         'associateIpv6Address': (bool, False),
     }
 
 
 class ElastigroupComputeLaunchSpecificationTag(AWSProperty):
     props = {
-        'tagKey': (basestring, False),
-        'tagValue': (basestring, False)
+        'tagKey': (str, False),
+        'tagValue': (str, False)
     }
 
 
 class ElastigroupComputeLaunchSpecification(AWSProperty):
     props = {
-        'loadBalancerNames': ([basestring], False),
+        'loadBalancerNames': ([str], False),
         'loadBalancersConfig': (ElastigroupComputeLaunchSpecificationLoadBalancerConfig, False),
-        'healthCheckType': (basestring, False),
+        'healthCheckType': (str, False),
         'healthCheckGracePeriod': (integer, False),
         'healthCheckUnhealthyDurationBeforeReplacement': (integer, False),
-        'securityGroupIds': ([basestring], False),
+        'securityGroupIds': ([str], False),
         'monitoring': (bool, False),
         'ebsOptimized': (bool, False),
-        'imageId': (basestring, False),
-        'tenancy': (basestring, False),
+        'imageId': (str, False),
+        'tenancy': (str, False),
         'iamRole': (ElastigroupComputeLaunchSpecificationIamRole, False),
-        'keyPair': (basestring, False),
-        'userData': (basestring, False),
-        'shutdownScript': (basestring, False),
+        'keyPair': (str, False),
+        'userData': (str, False),
+        'shutdownScript': (str, False),
         'blockDeviceMappings': ([ElastigroupComputeLaunchSpecificationBlockDevice], False),
         'networkInterfaces': ([ElastigroupComputeLaunchSpecificationNetworkInterface], False),
         'tags': ([ElastigroupComputeLaunchSpecificationTag], False)
@@ -277,9 +277,9 @@ class ElastigroupComputeLaunchSpecification(AWSProperty):
 
 class ElastigroupCompute(AWSProperty):
     props = {
-        'elasticIps': ([basestring], False),
+        'elasticIps': ([str], False),
         'instanceTypes': (ElastigroupComputeInstanceTypes, True),
-        'product': (basestring, True),
+        'product': (str, True),
         'availabilityZones': ([ElastigroupComputeAvailabilityZone], True),
         'launchSpecification': (ElastigroupComputeLaunchSpecification, True),
     }
@@ -290,13 +290,13 @@ class ElastigroupCapacity(AWSProperty):
         'minimum': (integer, False),
         'maximum': (integer, False),
         'target': (integer, True),
-        'unit': (basestring, True),
+        'unit': (str, True),
     }
 
 
 class ElastigroupSignals(AWSProperty):
     props = {
-        'name': (basestring, True),
+        'name': (str, True),
         'timeout': (integer, True)
     }
 
@@ -312,7 +312,7 @@ class ElastigroupPersistence(AWSProperty):
         'shouldPersistBlockDevices': (bool, False),
         'shouldPersistRootDevice': (bool, False),
         'shouldPersistPrivateIp': (bool, False),
-        'blockDevicesMode': (basestring, False),
+        'blockDevicesMode': (str, False),
     }
 
 
@@ -322,10 +322,10 @@ class ElastigroupStrategy(AWSProperty):
         'onDemandCount': (integer, False),
         'utilizeReservedInstances': (bool, False),
         'fallbackToOd': (bool, False),
-        'availabilityVsCost': (basestring, False),
+        'availabilityVsCost': (str, False),
         'drainingTimeout': (integer, False),
         'spinUpTime': (integer, False),
-        'lifetimePeriod': (basestring, False),
+        'lifetimePeriod': (str, False),
         'signals': ([ElastigroupSignals], False),
         'scalingStrategy': (ElastigroupScalingStrategy, False),
         'persistence': (ElastigroupPersistence, False)
@@ -334,64 +334,64 @@ class ElastigroupStrategy(AWSProperty):
 
 class ElastigroupScalingDimension(AWSProperty):
     props = {
-        'name': (basestring, True),
-        'value': (basestring, False)
+        'name': (str, True),
+        'value': (str, False)
     }
 
 
 class ElastigroupScalingUpAction(AWSProperty):
     props = {
-        'type': (basestring, True),
-        'adjustment': (basestring, False),
-        'minTargetCapacity': (basestring, False),
-        'target': (basestring, False),
-        'minimum': (basestring, False),
-        'maximum': (basestring, False),
+        'type': (str, True),
+        'adjustment': (str, False),
+        'minTargetCapacity': (str, False),
+        'target': (str, False),
+        'minimum': (str, False),
+        'maximum': (str, False),
     }
 
 
 class ElastigroupScalingUp(AWSProperty):
     props = {
         'action': (ElastigroupScalingUpAction, False),
-        'policyName': (basestring, False),
-        'namespace': (basestring, True),
-        'source': (basestring, False),
-        'metricName': (basestring, True),
+        'policyName': (str, False),
+        'namespace': (str, True),
+        'source': (str, False),
+        'metricName': (str, True),
         'dimensions': ([ElastigroupScalingDimension], False),
-        'statistic': (basestring, False),
-        'extendedStatistic': (basestring, False),
-        'unit': (basestring, False),
+        'statistic': (str, False),
+        'extendedStatistic': (str, False),
+        'unit': (str, False),
         'threshold': (integer, True),
         'adjustment': (integer, False),
         'minTargetCapacity': (integer, False),
         'period': (integer, False),
         'evaluationPeriods': (integer, False),
         'cooldown': (integer, False),
-        'operator': (basestring, False)
+        'operator': (str, False)
     }
 
 
 class ElastigroupScalingDownAction(AWSProperty):
     props = {
-        'type': (basestring, True),
-        'adjustment': (basestring, False),
-        'minTargetCapacity': (basestring, False),
-        'target': (basestring, False),
-        'minimum': (basestring, False),
-        'maximum': (basestring, False),
+        'type': (str, True),
+        'adjustment': (str, False),
+        'minTargetCapacity': (str, False),
+        'target': (str, False),
+        'minimum': (str, False),
+        'maximum': (str, False),
     }
 
 
 class ElastigroupScalingDown(AWSProperty):
     props = {
-        'policyName': (basestring, False),
-        'namespace': (basestring, True),
-        'source': (basestring, False),
-        'metricName': (basestring, True),
+        'policyName': (str, False),
+        'namespace': (str, True),
+        'source': (str, False),
+        'metricName': (str, True),
         'dimensions': ([ElastigroupScalingDimension], False),
-        'statistic': (basestring, False),
-        'extendedStatistic': (basestring, False),
-        'unit': (basestring, False),
+        'statistic': (str, False),
+        'extendedStatistic': (str, False),
+        'unit': (str, False),
         'threshold': (integer, True),
         'adjustment': (integer, False),
         'maxTargetCapacity': (integer, False),
@@ -399,7 +399,7 @@ class ElastigroupScalingDown(AWSProperty):
         'evaluationPeriods': (integer, False),
         'cooldown': (integer, False),
         'action': (ElastigroupScalingDownAction, False),
-        'operator': (basestring, False)
+        'operator': (str, False)
     }
 
 
@@ -413,9 +413,9 @@ class ElastigroupScaling(AWSProperty):
 class ElastigroupSchedulingTask(AWSProperty):
     props = {
         'isEnabled': (bool, False),
-        'frequency': (basestring, False),
-        'cronExpression': (basestring, False),
-        'taskType': (basestring, True),
+        'frequency': (str, False),
+        'cronExpression': (str, False),
+        'taskType': (str, True),
         'scaleTargetCapacity': (integer, False),
         'scaleMinCapacity': (integer, False),
         'scaleMaxCapacity': (integer, False),
@@ -437,8 +437,8 @@ class ElastigroupScheduling(AWSProperty):
 
 class ElastigroupConfig(AWSProperty):
     props = {
-        'name': (basestring, False),
-        'description': (basestring, False),
+        'name': (str, False),
+        'description': (str, False),
         'capacity': (ElastigroupCapacity, True),
         'strategy': (ElastigroupStrategy, True),
         'scaling': (ElastigroupScaling, False),
@@ -452,8 +452,8 @@ class Elastigroup(AWSCustomObject):
     resource_type = "Custom::elastigroup"
 
     props = {
-        'ServiceToken': (basestring, True),
-        'accessToken': (basestring, True),
-        'accountId': (basestring, True),
+        'ServiceToken': (str, True),
+        'accessToken': (str, True),
+        'accountId': (str, True),
         'group': (ElastigroupConfig, True)
     }
