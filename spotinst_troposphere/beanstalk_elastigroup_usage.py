@@ -1,7 +1,8 @@
 from troposphere import Template
 from troposphere.elasticbeanstalk import OptionSettings, Environment
+import spotinst_troposphere
 
-from beanstalk_elastigroup import BeanstalkEnvironmentConfig, BeanstalkElastigroup, BeanstalkElastigroupCapacity, \
+from spotinst_troposphere.beanstalk_elastigroup import BeanstalkEnvironmentConfig, BeanstalkElastigroup, BeanstalkElastigroupCapacity, \
     BeanstalkElastigroupConfig, BeanstalkEnvironmentNameConfig
 
 t = Template()

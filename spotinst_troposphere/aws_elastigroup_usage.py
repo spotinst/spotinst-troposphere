@@ -1,12 +1,13 @@
 from troposphere import Template
+import spotinst_troposphere
 
-from aws_elastigroup import Elastigroup, ElastigroupConfig, ElastigroupCapacity, ElastigroupStrategy;
-from aws_elastigroup import ElastigroupCompute, ElastigroupComputeInstanceTypes
-from aws_elastigroup import ElastigroupComputeAvailabilityZone, ElastigroupComputeLaunchSpecification, \
+from spotinst_troposphere.aws_elastigroup import Elastigroup, ElastigroupConfig, ElastigroupCapacity, ElastigroupStrategy;
+from spotinst_troposphere.aws_elastigroup import ElastigroupCompute, ElastigroupComputeInstanceTypes
+from spotinst_troposphere.aws_elastigroup import ElastigroupComputeAvailabilityZone, ElastigroupComputeLaunchSpecification, \
     ElastigroupScalingDown, ElastigroupScalingDownAction
-from aws_elastigroup import ElastigroupScaling
-from aws_elastigroup import ElastigroupScheduling, ElastigroupComputeLaunchSpecificationTag, ElastigroupScalingUpAction;
-from aws_elastigroup import ElastigroupThirdPartiesIntegration, ElastigroupSchedulingTask, \
+from spotinst_troposphere.aws_elastigroup import ElastigroupScaling
+from spotinst_troposphere.aws_elastigroup import ElastigroupScheduling, ElastigroupComputeLaunchSpecificationTag, ElastigroupScalingUpAction;
+from spotinst_troposphere.aws_elastigroup import ElastigroupThirdPartiesIntegration, ElastigroupSchedulingTask, \
     ElastigroupThirdPartiesIntegrationEcs, \
     ElastigroupThirdPartiesIntegrationEcsAutoScale, ElastigroupThirdPartiesIntegrationMlbRuntime, ElastigroupScalingUp, \
     ElastigroupPersistence;

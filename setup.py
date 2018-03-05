@@ -3,18 +3,18 @@ from codecs import open
 from os import path
 
 from setuptools import setup, find_packages
-import spotinst
+import spotinst_troposphere
 
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README'), encoding='utf-8') as f:
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='spotinst-troposphere',
+    name='spotinst_troposphere',
 
-    version=spotinst.__version__,
+    version=spotinst_troposphere.__version__,
 
     description='A Troposphere custom resource for Spotinst elastigroup',
     long_description='This package will allow you to work with spotinst and troposphere',
@@ -38,6 +38,6 @@ setup(
     ],
 
     keywords='spotinst spot instances aws ec2 cloud infrastructure development elastigroup troposphere',
-    packages=["spotinst"],
+    packages=["spotinst_troposphere"],
     install_requires=['requests']
 )
